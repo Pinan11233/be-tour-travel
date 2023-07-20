@@ -5,7 +5,7 @@ export const verifyToken = (req, res, next) => {
     const token = req.cookies.accessToken 
 
     if(!token){
-        return res.status(401).json({ success:false, message: 'You are not authorize'})
+        return res.status(401).json({ success:false, message: 'You are not author'})
     }
 
     //if token is exist then verify the token
@@ -42,7 +42,7 @@ export const verifyAdmin = (req, res, next) => {
             return
             res
                 .status(401)
-                .json({ success: false, message: 'You are not authorize'})
+                .json({ success: false, message: 'You are not authori'})
         }
     })
 }
